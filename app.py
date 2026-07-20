@@ -121,3 +121,50 @@ if st.button("Predict Customer", use_container_width=True):
 **Internet Service:** {internet}
 """
     )
+
+
+st.divider()
+
+with st.expander("About this Prediction Model", expanded=False):
+
+    st.markdown("""
+### How the Model Works
+
+This application uses a **Random Forest Machine Learning model** trained on the **Telco Customer Churn Dataset** to estimate whether a telecommunications customer is likely to **stay** or **leave (churn)**.
+
+The prediction is based on historical customer data and considers the following inputs:
+
+- **Tenure** – The number of months the customer has been with the company.
+- **Monthly Charges** – The customer's monthly subscription cost.
+- **Contract Type**
+  - **Month-to-month** – Monthly renewable subscription.
+  - **One year** – 12-month contract.
+  - **Two year** – 24-month contract.
+- **Internet Service**
+  - **DSL (Digital Subscriber Line)** – Broadband internet delivered through telephone lines.
+  - **Fiber Optic** – High-speed internet delivered through fiber optic cables.
+  - **No** – Customer does not subscribe to an internet service.
+
+### Prediction Guidelines
+
+The model does **not** rely on fixed rules. Instead, it recognizes patterns learned from thousands of historical customer records.
+
+Generally:
+
+- Customers with **shorter tenure** are more likely to churn.
+- Customers on **month-to-month contracts** typically have a higher churn risk than those on long-term contracts.
+- Customers with **higher monthly charges** may have an increased likelihood of leaving.
+- Long-term customers and those on **one-year or two-year contracts** generally have a lower churn risk.
+
+### Understanding the Probability
+
+The **Customer Exit Probability** represents the model's confidence that a customer belongs to the **churn** category.
+
+For example:
+
+- **0–30%** → Low likelihood of churn
+- **31–70%** → Moderate likelihood of churn
+- **71–100%** → High likelihood of churn
+
+*Note:* Predictions are based on statistical patterns learned from the training dataset and should be used as decision-support rather than absolute outcomes.
+""")
