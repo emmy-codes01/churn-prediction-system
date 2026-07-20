@@ -168,3 +168,18 @@ For example:
 
 *Note:* Predictions are based on statistical patterns learned from the training dataset and should be used as decision-support rather than absolute outcomes.
 """)
+
+
+st.divider()
+
+st.markdown(
+    """
+---
+<div style="text-align:center; color:gray; font-size:14px;">
+<b>Customer Churn Predictor</b><br>
+Developed by <b>Emmanuel Ayeni</b><br>
+Machine Learning • Streamlit • Scikit-learn
+</div>
+""",
+    unsafe_allow_html=True
+)
